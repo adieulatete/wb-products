@@ -1,4 +1,4 @@
-## WB_products
+## WB-products
 
 ### General information about the project
 API for obtaining product data on the Wilberries website by article number
@@ -6,9 +6,9 @@ API for obtaining product data on the Wilberries website by article number
 #### Functional
 
 Endpoints:  
-• Admin panel - /admin;
-• Endpoint for loading product data - api/products/parse-product/;
-• Endpoint for receiving all products - api/products/list-products/;
+• Admin panel - /admin;  
+• Endpoint for loading product data - api/products/parse-product/;  
+• Endpoint for receiving all products - api/products/list-products/;  
 
 #### Technologies used
 
