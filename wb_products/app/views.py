@@ -31,7 +31,7 @@ class ProductViewSet(viewsets.ViewSet):
     @action(detail=False, methods=['get'], url_path='list-products')
     def list_products(self, request):
         """List all products."""
-        products = Product.objects.all()
+        products = Product.objects.select_related('shop')
         serializer = ProductSerializer(products, many=True)
         
         return Response(serializer.data, status=status.HTTP_200_OK)

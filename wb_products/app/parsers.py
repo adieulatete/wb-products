@@ -20,7 +20,7 @@ def parse_product_data(article_number: int) -> Mapping[str, str]:
 
     product_data = {
         'product_name': result['name'],
-        'color': result.get('colors')[0]['name'] if result.get('colors') else None,
+        'color': result.get('colors')[0]['name'] if result.get('colors') else 'Unknown',
         'price_before_discounts': result['sizes'][0].get('price')['basic'] / 100 if result['sizes'][0].get('price') else 0,
         'price_after_discounts': result['sizes'][0].get('price')['product'] / 100 if result['sizes'][0].get('price') else 0,
         'remainder': result['totalQuantity'],
